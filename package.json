@@ -18,7 +18,7 @@
     "format:write": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
-    "test": "jest",
+    "test": "jest --env=jsdom",
     "prepublishOnly": "yarn build"
   },
   "jest": {
@@ -27,14 +27,23 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.16.0",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@rollup/plugin-url": "^6.1.0",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.5",
     "@types/react-dom": "^17.0.5",
+    "@types/styled-components": "^5.1.15",
+    "jest": "^27.3.1",
     "jest-styled-components": "^7.0.3",
+    "jsdom": "^18.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0",
-    "styled-components": "^5.2.0"
+    "react-router-dom": "^6.0.2",
+    "styled-components": "^5.3.3",
+    "ts-jest": "^27.0.7",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4"
   },
   "peerDependencies": {
     "react": "^17.0.2",
@@ -52,6 +61,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "gitHead": "ee9cdbaa3076ab3f9a1e4db63cb52068fcf06dd9"
+  }
 }
